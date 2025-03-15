@@ -4,9 +4,9 @@ body{
     font-family: 'Work Sans';   /*apply font*/
 }
 
-/*table alignments - designated left and right using class*/ 
-.rightside{     width:50%;  text-align: right;      }
-.leftside{      width:50%;  text-align: left;       }
+/*table alignments - designated left and right elements*/ 
+.rightside{     text-align: right;      }
+.leftside{      text-align: left;       }
 
 /*navigation bar*/
 .navigator{
@@ -15,18 +15,22 @@ body{
 
     height: 9vh;                 /*height of navigation bar*/
 
-    background-color:black;     
-}
+    background-color: black;     
 
-/*navigation bar: logo*/ 
-.navigator img{
-    width: 4vh;                 /*logo sized to navigation bar*/
-    border-radius: 100%;        /*logo rounded edge*/ 
-}
+    /*navigation bar: table of elements*/ 
+    table{
+        width: 100%;                 /*table takes up whole horizontal space*/
+    }
+    
+    /*navigation bar: logo*/ 
+    img{
+        width: 4vh;                 /*logo sized to navigation bar*/
+        border-radius: 100%;        /*logo rounded edge*/ 
+    }
 
-/*navigation bar: all elements denoted with <a tag>*/ 
-.navigator a{
-    text-decoration: none;      /*no text decor (eg. underline for hyperlinks)*/
-    color:white;
+    /*navigation bar: <a> tag elements - hyperlinks*/ 
+    a{
+        text-decoration: none;      /*no text decor (eg. underline for hyperlinks)*/
+        color: white;
+    }
 }
-
