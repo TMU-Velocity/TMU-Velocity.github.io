@@ -11,7 +11,7 @@ body{
 /*navigation bar*/
 .navigator{
     box-sizing:border-box;       /*allow padding within fixed dimension*/
-    padding: 15px 10vw;          /*fixed top padding, padding from the sides based on width*/
+    padding: 2vh 10vw;          /*fixed top padding, padding from the sides based on width*/
 
     height: 9vh;                 /*height of navigation bar*/
 
