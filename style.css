@@ -5,9 +5,7 @@ body{
 }
 
 /*navigation bar*/
-.navigator{
-    padding-left: 10vw;             /*padding left and right*/  
-    padding-right: 10vw;       
+.navigator{    
     height: 9vh;                    /*total height of navigation bar*/
     background-color: black;     
 
