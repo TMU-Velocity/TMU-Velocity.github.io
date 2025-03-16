@@ -13,6 +13,7 @@ body{
 
     /*navigation bar: table of elements*/ 
     table{
+        height: 9vh;                 /* table height takes us whole navigation space*/ 
         table-layout: fixed;         /* do not allow table boxes to change size according to content*/ 
         vertical-align: center;      /* elements vertically center */ 
         text-align: center;          /* elements horizontally center in each of their respective box */ 
