@@ -9,6 +9,7 @@ body{
 .navigator{    
     height: 9vh;                    /*total height of navigation bar*/
     background-color: black;     
+    font-size: 11px;
 
     /*navigation bar: table of elements*/ 
     table{
