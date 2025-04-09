@@ -7,22 +7,22 @@ body{
 
 /*navigation bar*/
 .navigator{    
-    height: 9vh;                    /*total height of navigation bar*/
+    height: 10vh;                    /*total height of navigation bar - 10% of screen height*/
     background-color: black;     
     font-size: 11px;
 
     /*navigation bar: table of elements*/ 
     table{
-        height: 9vh;                 /* table height takes us whole navigation space*/ 
+        height: 10vh;                 /* table height takes up whole navigation space*/ 
         table-layout: fixed;         /* do not allow table boxes to change size according to content*/ 
         vertical-align: center;      /* elements vertically center */ 
-        text-align: center;          /* elements horizontally center in each of their respective box */ 
+        text-align: center;          /* elements horizontally centred in each of their respective box */ 
         width: 100%;                 /*table takes up whole horizontal space*/
     }
     
     /*navigation bar: logo*/ 
     img{
-        width: 4vh;                 /*logo sized to navigation bar*/
+        height: 5vh;                /*logo sized to half of navigation bar*/
         border-radius: 100%;        /*logo rounded edge*/ 
     }
 
@@ -60,5 +60,17 @@ body{
     line-height: 0.5;     /*spacing of this text to the next line*/ 
 }
 
+.end{
+    font-size: 12px;
+    color: white; 
+    text-align: center;
+    
+    height: 18vh;
+    width: 100%;
+    
+    box-sizing: border-box;   /*padding left right*/ 
+    padding-left: 10vw;
+    padding-right: 10vw; 
+}
 
 
