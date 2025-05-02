@@ -1,52 +1,54 @@
-/*all website content*/
+/* all website content defaults */
 body{
-    margin:0 auto;                  /*website fills page*/ 
-    font-family: 'Rethink Sans';       /*apply font*/
-    color: white;                   /* text color default */        
+    margin: 0 auto;                  /* website fills page */ 
+    font-family: 'Rethink Sans';     /*apply body font*/
+    color: white;                    /* text color default */        
 }
 
-/*navigation bar*/
+/*navigation bar for all pages*/
 .navigator{    
-    height: 10vh;                    /*total height of navigation bar - 10% of screen height*/
+   
+    /* height is 10% of screen height */ 
+    height: 10vh;     
 
     /* gradient background for header */ 
     background-image: url('header.png');   
     background-position: center;
     background-size: cover;
-    
+
+    /* text size */ 
     font-size: 11px;
 
-    /*navigation bar: table of elements*/ 
+    /* sorted hyperlinks using a table */ 
     table{
-        height: 10vh;                 /* table height takes up whole navigation space*/ 
-        table-layout: fixed;         /* do not allow table boxes to change size according to content*/ 
+        height: 10vh;                /* table height = navigation bar height */ 
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
         vertical-align: center;      /* elements vertically center */ 
         text-align: center;          /* elements horizontally centred in each of their respective box */ 
-        width: 100%;                 /*table takes up whole horizontal space*/
+        width: 100%;                 /* table takes up whole horizontal space */
     }
     
-    /*navigation bar: logo*/ 
+    /* logo sizing */ 
     img{
-        height: 5vh;                /*logo sized to half of navigation bar*/
-        border-radius: 100%;        /*logo rounded edge*/ 
+        height: 5vh;                /* logo sized to half of navigation bar */
+        border-radius: 100%;        /* logo rounded edge */ 
     }
 
-    /*navigation bar: <a> tag elements - hyperlinks*/ 
+    /* <a> tag elements, hyperlinks*/ 
     a{
         font-family: 'Syncopate';     /* links should be Syncopate font */ 
-        text-decoration: none;      /*no text decor (eg. underline for hyperlinks)*/
-        color: white;
+        text-decoration: none;        /* no text decor (eg. underline for hyperlinks) */
+        color: white;                 /* match default text colour */ 
     }
 }
 
-/*home page*/ 
+/* home page */ 
 .home{
-    height: 2321px;                  /*total height of first section*/
-    width: 100%;                     /*section takes up whole horizontal space on screen*/
-    text-align: center;              /* text appears horizontally in the center*/
-    display: inline-block;           /* text inline on screen and acts as a block for padding*/ 
-
-    color: white;                    /*white text*/ 
+    height: 2321px;                /* total height of HOME page */
+    width: 100%;                   /* content stretched to width of device */
+    
+    text-align: center;            /* text appears horizontally in the center*/
+    display: inline-block;         /* text inline on screen and acts as a block for padding*/ 
     padding-top: 18vh;               /* top padding away from navigation*/ 
 
     /* gradient background image */ 
@@ -56,22 +58,22 @@ body{
 }
 
 .home_title{
-    font-family: 'Syncopate';
-    font-weight: 700; 
-    font-size: 8vw;    
-    line-height: 1.2;    /*spacing of this text to the next line*/ 
+    font-family: 'Syncopate';    /* title uses Syncopate font */ 
+    font-weight: 700;            /* bolded font */ 
+    font-size: 8vw;              
 }
 
 .home_subtitle{
+    line-height: 0.5;     /* spacing of this text to the next line */ 
     font-size: 3vw;
-    line-height: 0.5;     /*spacing of this text to the next line*/ 
 }
 
+/* footer for all pages */ 
 .end{
-    font-size: 12px;
-    text-align: center;
+    font-size: 12px;        /* text size */ 
+    text-align: center;     /* horizontally centered */ 
     
-    height: 18vh;
+    height: 18vh;          
     width: 100%;
     
     box-sizing: border-box;   /*padding left right*/ 
