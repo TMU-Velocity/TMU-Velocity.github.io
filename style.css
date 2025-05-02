@@ -1,14 +1,19 @@
 /*all website content*/
 body{
     margin:0 auto;                  /*website fills page*/ 
-    font-family: 'Unbounded';       /*apply font*/
-    background-color: black;       
+    font-family: 'Rethink Sans';       /*apply font*/
+    color: white;                   /* text color default */        
 }
 
 /*navigation bar*/
 .navigator{    
     height: 10vh;                    /*total height of navigation bar - 10% of screen height*/
-    background-color: black;     
+
+    /* gradient background for header */ 
+    background-image: url('header.png');   
+    background-position: center;
+    background-size: cover;
+    
     font-size: 11px;
 
     /*navigation bar: table of elements*/ 
@@ -28,41 +33,42 @@ body{
 
     /*navigation bar: <a> tag elements - hyperlinks*/ 
     a{
+        font-family: 'Syncopate';     /* links should be Syncopate font */ 
         text-decoration: none;      /*no text decor (eg. underline for hyperlinks)*/
         color: white;
     }
 }
 
-/*title page*/ 
-.topic1{
-    height: 95vh;                    /*total height of first section*/
+/*home page*/ 
+.home{
+    height: 2321px;                  /*total height of first section*/
     width: 100%;                     /*section takes up whole horizontal space on screen*/
     text-align: center;              /* text appears horizontally in the center*/
     display: inline-block;           /* text inline on screen and acts as a block for padding*/ 
 
     color: white;                    /*white text*/ 
-    padding-top: 11vh;               /* top padding away from navigation*/ 
+    padding-top: 18vh;               /* top padding away from navigation*/ 
 
-    /* will uncomment this section when the background gif is uploaded
-    background-image: url(background1.gif);  
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
+    /* gradient background image */ 
+    background-image: url('home.png');  
+    background-position: center;           /* center image to ensure ring is center */                                      
+    background-size: cover;                /* background image stretches onto screen */ 
 }
 
-.text2{
+.home_title{
+    font-family: 'Syncopate';
+    font-weight: 700; 
     font-size: 8vw;    
     line-height: 1.2;    /*spacing of this text to the next line*/ 
 }
 
-.text1{
+.home_subtitle{
     font-size: 3vw;
     line-height: 0.5;     /*spacing of this text to the next line*/ 
 }
 
 .end{
     font-size: 12px;
-    color: white; 
     text-align: center;
     
     height: 18vh;
