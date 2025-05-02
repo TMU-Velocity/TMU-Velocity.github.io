@@ -42,6 +42,25 @@ body{
     }
 }
 
+/* footer for all pages */ 
+.end{
+    font-size: 12px;        /* text size */ 
+    text-align: center;     /* horizontally centered */ 
+
+    /* gradient image as background */ 
+    background-image: url('footer.png');  
+    background-position: center;
+    background-size: cover;
+    
+    height: 18vh;          
+    width: 100%;
+    
+    box-sizing: border-box;   /*padding left right*/ 
+    padding-left: 10vw;
+    padding-right: 10vw; 
+}
+
+
 /* home page */ 
 .home{
     height: 2321px;                /* total height of HOME page */
@@ -67,18 +86,3 @@ body{
     line-height: 0.5;     /* spacing of this text to the next line */ 
     font-size: 3vw;
 }
-
-/* footer for all pages */ 
-.end{
-    font-size: 12px;        /* text size */ 
-    text-align: center;     /* horizontally centered */ 
-    
-    height: 18vh;          
-    width: 100%;
-    
-    box-sizing: border-box;   /*padding left right*/ 
-    padding-left: 10vw;
-    padding-right: 10vw; 
-}
-
-
