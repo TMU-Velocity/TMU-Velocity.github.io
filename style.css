@@ -1,32 +1,93 @@
-/* all website content defaults */
+/********************************* all website content defaults ********************************/
 body{
-    margin: 0 auto;                  /* website fills page */ 
-    font-family: 'Rethink Sans';     /*apply body font*/
-    color: white;                    /* text color default */        
+    /* website fills page */ 
+    margin: 0 auto;             
+
+    /* default font type */ 
+    font-family: 'Rethink Sans';     
+    color: white;        
+
+    /* table defaults*/ 
+    table{
+        height: 100%;                /* table stretches vertically to fit any given space */ 
+        width: 100%;                 /* table takes up whole horizontal space */
+
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
+        vertical-align: center;      /* elements vertically center */ 
+        text-align: center;          /* elements horizontally centred in each of their respective box */ 
+    }     
 }
+/********************************* all website content defaults ********************************/
+
+/***************************** adjustments based on size of device ********************************/
+
+/*   adjustments for smaller devices (width: 0-799px):
+         - font size increases
+         - padding decreases
+         - images enlarge            */
+@media only screen and (min-width:0px){ 
+
+    .navigator{ font-size: 10px; }    /* navigation font */ 
+    body{ font-size: 3.5vw; }         /* default font */ 
+
+    /* homepage adjustments*/ 
+    .home{
+        padding-top: 50px;            /* top padding away from navigation*/ 
+        padding-left: 10vw;           /* horizontal padding */ 
+        padding-right: 10vw;
+
+        img{ width:80vw; }            /* RC car image sizing */ 
+    }
+
+    /* content font sizing */ 
+    .home_title{ font-size: 10vw; }    
+    .home_subtitle{ font-size: 7vw; }
+    .home_heading{ font-size: 7vw; }
+
+    /* image content sizing */ 
+    .home_comparison{ img { width: 35vw; } }
+    .home_team{ img { width: 25vw; } }
+}
+
+/*   adjustments for larger devices (width: >800px):
+         - font size decreases
+         - padding increases
+         - images shrink             */
+@media only screen and (min-width:800px){  
+    .navigator{ font-size: 1.8vh; }      /* navigation font */ 
+    body{ font-size: 2vw; }              /* default font */ 
+
+    /* homepage adjustments*/ 
+    .home{
+        padding-top: 80px;               /* top padding away from navigation*/ 
+        padding-left: 15vw;              /* horizontal padding */ 
+        padding-right: 15vw; 
+        
+        img{ width:50vw; }               /* RC car image sizing */
+    }
+
+    /* content font sizing */ 
+    .home_title{ font-size: 7vw; }
+    .home_subtitle{ font-size: 4.5vw;}
+    .home_heading{ font-size: 4vw; }
+
+     /* image content sizing */
+    .home_comparison{ img { width: 30vw; } }
+    .home_team{ img { width: 20vw; } }
+}
+
+/***************************** adjustments based on size of device ********************************/
 
 /*navigation bar for all pages*/
 .navigator{    
    
-    /* height is 10% of screen height */ 
-    height: 10vh;     
+    /* height is 8% of screen height */ 
+    height: 8vh;     
 
     /* gradient background for header */ 
     background-image: url('header.png');   
     background-position: center;
     background-size: cover;
-
-    /* text size */ 
-    font-size: 11px;
-
-    /* sorted hyperlinks using a table */ 
-    table{
-        height: 10vh;                /* table height = navigation bar height */ 
-        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
-        vertical-align: center;      /* elements vertically center */ 
-        text-align: center;          /* elements horizontally centred in each of their respective box */ 
-        width: 100%;                 /* table takes up whole horizontal space */
-    }
     
     /* logo sizing */ 
     img{
@@ -43,46 +104,67 @@ body{
 }
 
 /* footer for all pages */ 
-.end{
-    font-size: 12px;        /* text size */ 
+.end{ 
     text-align: center;     /* horizontally centered */ 
 
     /* gradient image as background */ 
     background-image: url('footer.png');  
     background-position: center;
     background-size: cover;
-    
-    height: 18vh;          
+
+    /* enough height for all content + stretched width */
+    height: fit-content;          
     width: 100%;
-    
-    box-sizing: border-box;   /*padding left right*/ 
-    padding-left: 10vw;
-    padding-right: 10vw; 
+
+    /* padding for footer*/
+    box-sizing: border-box;   
+    /* note: top, right, and bottom fixed amount with more padding on left side to adjust horizontal centring from table*/
+    padding: 30px 10px 50px 10vw; 
+
+    img{
+        height: 30px;     /* sizing of logo hyperlinks */ 
+    }
 }
 
 
 /* home page */ 
 .home{
-    height: 2321px;                /* total height of HOME page */
-    width: 100%;                   /* content stretched to width of device */
+    /* enough height for all content + stretched width */
+    height: fit-content;         
+    width: 100%;                   
     
     text-align: center;            /* text appears horizontally in the center*/
-    display: inline-block;         /* text inline on screen and acts as a block for padding*/ 
-    padding-top: 18vh;               /* top padding away from navigation*/ 
+    box-sizing: border-box;        /* allow padding, adjusted depending on device */
 
     /* gradient background image */ 
     background-image: url('home.png');  
     background-position: center;           /* center image to ensure ring is center */                                      
     background-size: cover;                /* background image stretches onto screen */ 
+
+    /* ensure images center within their respective columns */ 
+    img{
+        display: inline;
+        background-position: center;
+    }
 }
 
-.home_title{
-    font-family: 'Syncopate';    /* title uses Syncopate font */ 
-    font-weight: 700;            /* bolded font */ 
-    font-size: 8vw;              
+/* text using different font: hyperlinks, title, and headings*/ 
+a, .home_title, .home_heading{
+    font-family: 'Syncopate';    
+    font-weight: 700;               
+    text-shadow: 10px 0px 10px #00000015;
+
+    text-decoration: none;
+    color: white; 
 }
 
 .home_subtitle{
-    line-height: 0.5;     /* spacing of this text to the next line */ 
-    font-size: 3vw;
+    line-height: 1.2;     /* spacing of this text to the next line */ 
+}
+
+.home_comparison, .home_team{
+    img{
+        display: inline;
+        border-radius: 10%;
+    }
 }
