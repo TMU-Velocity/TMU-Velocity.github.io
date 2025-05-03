@@ -91,15 +91,8 @@ body{
     
     /* logo sizing */ 
     img{
-        height: 5vh;                /* logo sized to half of navigation bar */
+        height: 5vh;                /* logo sized to slightly larger than half of navigation bar */
         border-radius: 100%;        /* logo rounded edge */ 
-    }
-
-    /* <a> tag elements, hyperlinks*/ 
-    a{
-        font-family: 'Syncopate';     /* links should be Syncopate font */ 
-        text-decoration: none;        /* no text decor (eg. underline for hyperlinks) */
-        color: white;                 /* match default text colour */ 
     }
 }
 
