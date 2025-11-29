@@ -5,86 +5,51 @@ body{
 
     /* default font type */ 
     font-family: 'Rethink Sans';     
-    color: white;        
+    color: black;        
+}
+
+/***************************** adjustments based on size of device ********************************/
+/*   adjustments for smaller devices (width: 0-799px):
+         - font size increases
+         - padding decreases
+         - images enlarge            
+*/
+@media only screen and (min-width:0px){ 
+
+    .bar{ font-size: 10px; }    /* navigation and end cap font */ 
+   
+}
+
+/*   adjustments for larger devices (width: >800px):
+         - font size decreases
+         - padding increases
+         - images shrink            
+*/
+@media only screen and (min-width:800px){  
+
+    .bar{ font-size: 1.8vh; }    /* navigation and end cap font */ 
+    
+}
+
+/***************************** adjustments based on size of device ********************************/
+
+/*navigation bar and end cap for all pages*/
+.bar{    
 
     /* table defaults*/ 
     table{
-        height: 100%;                /* table stretches vertically to fit any given space */ 
+        height: 100%;                /* table stretches vertically to fit given space of div */ 
         width: 100%;                 /* table takes up whole horizontal space */
 
         table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
         vertical-align: center;      /* elements vertically center */ 
         text-align: center;          /* elements horizontally centred in each of their respective box */ 
     }     
-}
-/********************************* all website content defaults ********************************/
-
-/***************************** adjustments based on size of device ********************************/
-
-/*   adjustments for smaller devices (width: 0-799px):
-         - font size increases
-         - padding decreases
-         - images enlarge            */
-@media only screen and (min-width:0px){ 
-
-    .navigator{ font-size: 10px; }    /* navigation font */ 
-    body{ font-size: 3.5vw; }         /* default font */ 
-
-    /* homepage adjustments*/ 
-    .home{
-        padding-top: 50px;            /* top padding away from navigation*/ 
-        padding-left: 10vw;           /* horizontal padding */ 
-        padding-right: 10vw;
-
-        img{ width:80vw; }            /* RC car image sizing */ 
-    }
-
-    /* content font sizing */ 
-    .home_title{ font-size: 10vw; }    
-    .home_subtitle{ font-size: 7vw; }
-    .home_heading{ font-size: 7vw; }
-
-    /* image content sizing */ 
-    .home_comparison{ img { width: 35vw; } }
-    .home_team{ img { width: 25vw; } }
-}
-
-/*   adjustments for larger devices (width: >800px):
-         - font size decreases
-         - padding increases
-         - images shrink             */
-@media only screen and (min-width:800px){  
-    .navigator{ font-size: 1.8vh; }      /* navigation font */ 
-    body{ font-size: 2vw; }              /* default font */ 
-
-    /* homepage adjustments*/ 
-    .home{
-        padding-top: 80px;               /* top padding away from navigation*/ 
-        padding-left: 15vw;              /* horizontal padding */ 
-        padding-right: 15vw; 
-        
-        img{ width:50vw; }               /* RC car image sizing */
-    }
-
-    /* content font sizing */ 
-    .home_title{ font-size: 7vw; }
-    .home_subtitle{ font-size: 4.5vw;}
-    .home_heading{ font-size: 4vw; }
-
-     /* image content sizing */
-    .home_comparison{ img { width: 30vw; } }
-    .home_team{ img { width: 20vw; } }
-}
-
-/***************************** adjustments based on size of device ********************************/
-
-/*navigation bar for all pages*/
-.navigator{    
    
     /* height is 8% of screen height */ 
     height: 8vh;     
 
-    /* gradient background for header */ 
+    /* background for header */ 
     background-image: url('header.png');   
     background-position: center;
     background-size: cover;
@@ -92,72 +57,14 @@ body{
     /* logo sizing */ 
     img{
         height: 5vh;                /* logo sized to slightly larger than half of navigation bar */
-        border-radius: 100%;        /* logo rounded edge */ 
     }
-}
-
-/* footer for all pages */ 
-.end{ 
-    text-align: center;     /* horizontally centered */ 
-
-    /* gradient image as background */ 
-    background-image: url('footer.png');  
-    background-position: center;
-    background-size: cover;
-
-    /* enough height for all content + stretched width */
-    height: fit-content;          
-    width: 100%;
-
-    /* padding for footer*/
-    box-sizing: border-box;   
-    /* note: top, right, and bottom fixed amount with more padding on left side to adjust horizontal centring from table*/
-    padding: 30px 10px 50px 10vw; 
-
-    img{
-        height: 30px;     /* sizing of logo hyperlinks */ 
-    }
-}
-
-
-/* home page */ 
-.home{
-    /* enough height for all content + stretched width */
-    height: fit-content;         
-    width: 100%;                   
     
-    text-align: center;            /* text appears horizontally in the center*/
-    box-sizing: border-box;        /* allow padding, adjusted depending on device */
-
-    /* gradient background image */ 
-    background-image: url('home.png');  
-    background-position: center;           /* center image to ensure ring is center */                                      
-    background-size: cover;                /* background image stretches onto screen */ 
-
-    /* ensure images center within their respective columns */ 
-    img{
-        display: inline;
-        background-position: center;
+    /* text/links */ 
+    a{
+        color: white;
+        text-decoration: none;  /* remove underlines */
     }
-}
 
-/* text using different font: hyperlinks, title, and headings*/ 
-a, .home_title, .home_heading{
-    font-family: 'Syncopate';    
-    font-weight: 700;               
-    text-shadow: 10px 0px 10px #00000015;
-
-    text-decoration: none;
-    color: white; 
-}
-
-.home_subtitle{
-    line-height: 1.2;     /* spacing of this text to the next line */ 
-}
-
-.home_comparison, .home_team{
-    img{
-        display: inline;
-        border-radius: 10%;
-    }
+    /* general text also white */ 
+    color: white;
 }
