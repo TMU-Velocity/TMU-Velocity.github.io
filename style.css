@@ -4,37 +4,70 @@ body{
     margin: 0 auto;             
 
     /* default font type */ 
-    font-family: 'Rethink Sans';     
-    color: black;        
+    font-family: 'Noto Sans';     
+    color: black;     
 }
 
 /***************************** adjustments based on size of device ********************************/
-/*   adjustments for smaller devices (width: 0-799px):
-         - font size increases
-         - padding decreases
-         - images enlarge            
-*/
-@media only screen and (min-width:0px){ 
 
-    .bar{ font-size: 10px; }    /* navigation and end cap font */ 
-   
-}
+@media (orientation: portrait) {
 
-/*   adjustments for larger devices (width: >800px):
-         - font size decreases
-         - padding increases
-         - images shrink            
-*/
-@media only screen and (min-width:800px){  
-
-    .bar{ font-size: 1.8vh; }    /* navigation and end cap font */ 
+    .bar{ font-size: 2.5vw; }    /* navigation and end cap font */ 
     
+    /* fonts for small width */ 
+    .main_title{  font-size: 8vw;  margin-left: 1vw;    margin-right: 1vw;  }         /* main title font */
+    .title     {  font-size: 6vw;  margin-left: 1vw;    margin-right: 1vw;  }         /* title font */
+    .subtitle  {  font-size: 4vw;  margin-left: 1vw;    margin-right: 1vw;  }         /* subtitle font */ 
+    .body_text {  font-size: 3.2vw;  margin-left: 1vw;    margin-right: 1vw;  }       /* body font */ 
+
+    /* vertical does not have enough space for side images, remove them */
+    .pc_image{ 
+          img{width: 0px;}  
+          #background-video {width: 0vw; height: 0vh;}   
+    }
+
+    /* insert images directly below text only + margins*/ 
+    .mobile_image{    
+        img{width: 70vw;}   
+        margin-left: 3vw;    
+        margin-right: 3vw;  
+        #background-video {width: 70vw;}   
+    }
+}
+
+@media (orientation: landscape) {
+
+    .bar{ font-size: 2.3vh; }    /* navigation and end cap font */ 
+
+    /* fonts for wide horizontal + margins to keep text apart*/ 
+    .main_title{  font-size: 8vh;    margin-left: 3vw;    margin-right: 3vw;  }                    /* main title font */
+    .title     {  font-size: 5.8vh;    margin-left: 3vw;    margin-right: 3vw;  }    /* title font*/
+    .subtitle  {  font-size: 2.7vh;    margin-left: 3vw;    margin-right: 3vw;  }    /* subtitle font */ 
+    .body_text {  font-size: 2.1vh;    margin-left: 3vw;    margin-right: 3vw;  }    /* body font */ 
+
+    /* horizontal page images go to the right of text + leave some space to the sides*/ 
+    .pc_image{    
+        img{width: 32vw;}   
+        margin-left: 3vw;  
+        margin-right: 3vw; 
+        #background-video {width: 40vw}   
+    }
+
+    /* do not include the extra vertical image for adjustment */
+    .mobile_image{    
+        img{width: 0vw;}   
+        #background-video {width: 0vw; height: 0vh;}   
+    }
 }
 
 /***************************** adjustments based on size of device ********************************/
 
-/*navigation bar and end cap for all pages*/
+
+/***************************** navigation bar and end cap for all pages ********************************/
 .bar{    
+
+    /* different font for bar */ 
+    font-family: 'Rethink Sans'; 
 
     /* table defaults*/ 
     table{
@@ -46,17 +79,17 @@ body{
         text-align: center;          /* elements horizontally centred in each of their respective box */ 
     }     
    
-    /* height is 8% of screen height */ 
-    height: 8vh;     
+    /* height is 10% of screen height */ 
+    height: 10vh;     
 
-    /* background for header */ 
-    background-image: url('header.png');   
-    background-position: center;
-    background-size: cover;
+    /* background colour */
+    background-color: rgb(79, 93, 245);  
     
     /* logo sizing */ 
     img{
-        height: 5vh;                /* logo sized to slightly larger than half of navigation bar */
+        height: 5vh;            /* logo sized to slightly larger than half of navigation bar */
+        margin-right: 15px;     /* padding between items */ 
+        margin-left: 15px;
     }
     
     /* text/links */ 
@@ -68,3 +101,88 @@ body{
     /* general text also white */ 
     color: white;
 } 
+
+/***************************** Homepage elements ********************************/
+
+/*   title   */
+.opening1{
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    /* font colour */ 
+    color:black;
+    
+    /* table defaults*/ 
+    table{
+        height: 100%;                /* table stretches vertically to fit given space of div */ 
+        max-width: 100%;                 /* table takes up whole horizontal space */
+
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
+        vertical-align: center;      /* elements vertically center */ 
+        margin-left: 10vw;           /* text padding */ 
+        margin-right: 10vw;  
+    }  
+}
+
+/* about section */ 
+.opening2{
+
+    /* fixed height */ 
+    height: 70vh;
+
+    background-color:rgb(44, 57, 198); 
+
+    /* table defaults*/ 
+    table{
+        height: 100%;                /* table stretches vertically to fit given space of div */ 
+        max-width: 100%;             /* table takes up whole horizontal space */
+
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
+        vertical-align: center;      /* elements vertically center */ 
+        margin-left: 10vw;           /* text padding */ 
+        margin-right: 10vw;  
+
+        
+    }  
+
+    a{  color: white;  }
+    
+    color:white;
+}
+
+/*   work section   */
+.opening3{
+
+    height: 60vh;
+
+    background-color:rgb(161, 183, 255); 
+
+    /* table defaults*/ 
+    table{
+        height: 100%;                /* table stretches vertically to fit given space of div */ 
+        max-width: 100%;             /* table takes up whole horizontal space */
+
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
+        vertical-align: center;      /* elements vertically center */ 
+        margin-left: 10vw;           /* text padding */ 
+        margin-right: 10vw;  
+    }  
+}
+
+/*   connect with us   */
+.opening4{  
+    height: 60vh;
+
+    background-color:white; 
+
+    /* table defaults*/ 
+    table{
+        height: 100%;                /* table stretches vertically to fit given space of div */ 
+        width: 100%;                 /* table takes up whole horizontal space */
+
+        table-layout: fixed;         /* do not allow table boxes to change size according to text within*/ 
+        vertical-align: center;      /* elements vertically center */ 
+        text-align: center;          /* elements horizontally centred in each of their respective box */ 
+    }    
+}
